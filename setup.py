@@ -8,7 +8,7 @@ setup(
     author='krishnan',
     url='https://github.com/krishnanmuthaiahpillai/howmanypeoplearearound1',
     author_email='krishnanmuthaiahpillai@gmail.com',
-    download_url='https://github.com/schollz/howmanypeoplearearound/archive/v0.3.5.tar.gz',
+    download_url='https://github.com/krishnanmuthaiahpillai/howmanypeoplearearound1/archive/v1.0.tar.gz',
     keywords=['tshark', 'wifi', 'location'],
     classifiers=[],
     install_requires=[
