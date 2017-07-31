@@ -121,6 +121,7 @@ def scan(adapter, scantime, verbose, number, nearby, jsonprint, out, allmacaddre
     # Scan with tshark
     command = [tshark, '-I', '-i', adapter, '-a',
                'duration:' + scantime, '-w', '/tmp/tshark-temp1']
+    print command
     if verbose:
         print(' '.join(command))
     run_tshark = subprocess.Popen(
@@ -138,6 +139,7 @@ def scan(adapter, scantime, verbose, number, nearby, jsonprint, out, allmacaddre
         'wlan.bssid', '-e',
         'radiotap.dbm_antsignal'
     ]
+    print command
     if verbose:
         print(' '.join(command))
     run_tshark = subprocess.Popen(
