@@ -54,7 +54,8 @@ def analyze_file(fname, port):
         js += ('\n  y: [%s],' % ', '.join(mac_data[mac]['y']))
         js += ("\n name: '%s', mode: 'markers', type:'scatter' };\n\n" % mac)
     js += ('\n\nvar data = [%s];' % ', '.join(mac_names))
-    js += ("\n\nPlotly.newPlot('myDiv',data,layout2);")
+    js+=('\n \n Plotly.d3.json('https://raw.githubusercontent.com/plotly/datasets/master/custom_heatmap_colorscale.json', function(figure) { var layout = {title: 'YIOrRd'};
+    js += ("\n\nPlotly.newPlot('myDiv',data,layout);")
     # js += ('\nvar num_cellphones = {')
     # js += ('\n  x: timex,')
     # js += ('\n  y: [%s],' % ', '.join(num['y']))
@@ -69,7 +70,7 @@ def analyze_file(fname, port):
     </head>
 
     <body>
-        <div id="myDiv" style="width: 950px; height: 350px;background-image: url(http://7-themes.com/data_images/collection/2/4441632-white-wallpapers.jpg);">
+        <div id="myDiv" style="width: 950px; height: 350px;background-image: url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/Q-Z/tiger-mom-cub.ngsversion.1475241173666.jpg);">
             <!-- Plotly chart will be drawn inside this DIV -->
         </div>
         <script>
