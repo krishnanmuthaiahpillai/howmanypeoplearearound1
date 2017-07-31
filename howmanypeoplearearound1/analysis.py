@@ -77,25 +77,6 @@ def analyze_file(fname, port):
             <!-- Plotly chart will be drawn inside this DIV -->
         </div>
         <script>
-# var layout1 = {
-#   title: 'Total Count',
-#   xaxis: {
-#     title: 'date',
-#     titlefont: {
-#       family: 'Courier New, monospace',
-#       size: 18,
-#       color: '#7f7f7f'
-#     }
-#   },
-#   yaxis: {
-#     title: 'number',
-#     titlefont: {
-#       family: 'Courier New, monospace',
-#       size: 18,
-#       color: '#7f7f7f'
-#     }
-#   }
-# };
 var layout2 = {
   title: 'Individual traces',
   xaxis: {
