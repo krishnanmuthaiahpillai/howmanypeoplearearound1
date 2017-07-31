@@ -61,6 +61,7 @@ def analyze_file(fname, port):
     js += ("\n name: 'N', mode: 'lines', type:'scatter' };\n\n")
     js += ("\n\nPlotly.newPlot('myDiv2',[num_cellphones],layout1);")
 
+    print js
     with open('index.html', 'w') as f:
         f.write("""<html><head>
         <!-- Plotly.js -->
