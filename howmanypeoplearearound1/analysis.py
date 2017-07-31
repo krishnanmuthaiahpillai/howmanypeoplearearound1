@@ -55,11 +55,11 @@ def analyze_file(fname, port):
         js += ("\n name: '%s', mode: 'lines', type:'scatter' };\n\n" % mac)
     js += ('\n\nvar data = [%s];' % ', '.join(mac_names))
     js += ("\n\nPlotly.newPlot('myDiv',data,layout2);")
-    js += ('\nvar num_cellphones = {')
-    js += ('\n  x: timex,')
-    js += ('\n  y: [%s],' % ', '.join(num['y']))
-    js += ("\n name: 'N', mode: 'lines', type:'scatter' };\n\n")
-    js += ("\n\nPlotly.newPlot('myDiv2',[num_cellphones],layout1);")
+    # js += ('\nvar num_cellphones = {')
+    # js += ('\n  x: timex,')
+    # js += ('\n  y: [%s],' % ', '.join(num['y']))
+    # js += ("\n name: 'N', mode: 'lines', type:'scatter' };\n\n")
+    # js += ("\n\nPlotly.newPlot('myDiv2',[num_cellphones],layout1);")
 
     print js
     with open('index.html', 'w') as f:

@@ -120,7 +120,7 @@ def scan(adapter, scantime, verbose, number, nearby, jsonprint, out, allmacaddre
 
     # Scan with tshark
     command = [tshark, '-I', '-i', adapter, '-a',
-               'duration:' + scantime, '-w', '/tmp/tshark-temp']
+               'duration:' + scantime, '-w', '/tmp/tshark-temp1']
     if verbose:
         print(' '.join(command))
     run_tshark = subprocess.Popen(
@@ -132,7 +132,7 @@ def scan(adapter, scantime, verbose, number, nearby, jsonprint, out, allmacaddre
     # Read tshark output
     command = [
         tshark, '-r',
-        '/tmp/tshark-temp', '-T',
+        '/tmp/tshark-temp1', '-T',
         'fields', '-e',
         'wlan.sa', '-e',
         'wlan.bssid', '-e',
@@ -227,7 +227,7 @@ def scan(adapter, scantime, verbose, number, nearby, jsonprint, out, allmacaddre
             f.write(json.dumps(data_dump) + "\n")
         if verbose:
             print("Wrote %d records to %s" % (len(cellphone_people), out))
-    os.remove('/tmp/tshark-temp')
+    os.remove('/tmp/tshark-temp1')
 
 
 if __name__ == '__main__':
