@@ -52,7 +52,7 @@ def analyze_file(fname, port):
         js += ('\nvar %s = {' % mac_names[i])
         js += ('\n  x: timex,')
         js += ('\n  y: [%s],' % ', '.join(mac_data[mac]['y']))
-        js += ("\n name: '%s', mode: 'lines', type:'scatter' };\n\n" % mac)
+        js += ("\n name: '%s', mode: 'markers', type:'scatter' };\n\n" % mac)
     js += ('\n\nvar data = [%s];' % ', '.join(mac_names))
     js += ("\n\nPlotly.newPlot('myDiv',data,layout2);")
     # js += ('\nvar num_cellphones = {')
