@@ -69,7 +69,7 @@ def analyze_file(fname, port):
     </head>
 
     <body>
-        <div id="myDiv" style="width: 950px; height: 350px;">
+        <div id="myDiv" style="width: 950px; height: 350px;background-image: url(http://7-themes.com/data_images/collection/2/4441632-white-wallpapers.jpg);">
             <!-- Plotly chart will be drawn inside this DIV -->
         </div>
         <script>
