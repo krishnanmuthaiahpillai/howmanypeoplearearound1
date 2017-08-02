@@ -65,9 +65,9 @@ def showTimer(timeleft):
 @click.option('--loop', help='loop forever', is_flag=True)
 @click.option('--port', default=8001, help='port to use when serving analysis')
 @click.option('--sort', help='sort cellphone data by distance (rssi)', is_flag=True)
-def main(adapter, scantime, verbose, number, nearby, jsonprint, out, allmacaddresses, nocorrection, loop, analyze, port, sort):
+def main(adapter, scantime, verbose, number, nearby, jsonprint, out, allmacaddresses, nocorrection, loop, analyze, sort):
     if analyze != '':
-        analyze_file(analyze, port)
+        analyze_file(analyze)
         return
     if loop:
         while True:
