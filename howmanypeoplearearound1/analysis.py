@@ -6,7 +6,7 @@ import sys
 from howmanypeoplearearound1.plotlyjs import *
 
 
-def analyze_file(fname, port):
+def analyze_file(fname):
     lines = []
     with open(fname, 'r') as f:
       for line in f:
@@ -95,17 +95,17 @@ var layout2 = {
     %s
         </script>
     </body></html>""" % (js))
-    print("Wrote index.html")
-    print("Open browser to http://localhost:" + str(port))
-    print("Type Ctl+C to exit")
-    if sys.version_info >= (3, 0):
-        # Python 3 code in this block
-        from http.server import HTTPServer, SimpleHTTPRequestHandler
-        httpd = HTTPServer(('localhost', port), SimpleHTTPRequestHandler)
-        httpd.serve_forever()
-    else:
-        # Python 2 code in this block
-        import SimpleHTTPServer
-        import SocketServer
-        httpd = SocketServer.TCPServer(("", port), SimpleHTTPServer.SimpleHTTPRequestHandler)
-        httpd.serve_forever()
+    # print("Wrote index.html")
+    # print("Open browser to http://localhost:" + str(port))
+    # print("Type Ctl+C to exit")
+    # if sys.version_info >= (3, 0):
+    #     # Python 3 code in this block
+    #     from http.server import HTTPServer, SimpleHTTPRequestHandler
+    #     httpd = HTTPServer(('localhost', port), SimpleHTTPRequestHandler)
+    #     httpd.serve_forever()
+    # else:
+    #     # Python 2 code in this block
+    #     import SimpleHTTPServer
+    #     import SocketServer
+    #     httpd = SocketServer.TCPServer(("", port), SimpleHTTPServer.SimpleHTTPRequestHandler)
+    #     httpd.serve_forever()
